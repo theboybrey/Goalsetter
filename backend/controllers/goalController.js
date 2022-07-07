@@ -51,7 +51,7 @@ const  updateGoals = asyncHandler(async (req, res) => {
 // @access Private
 const  deleteGoals = asyncHandler(async(req, res) => {
     
-    const deleteGoal = await goal.remove();
+    await goal.remove();
 
     res.status(200).json({id: req.params.id})
 })
